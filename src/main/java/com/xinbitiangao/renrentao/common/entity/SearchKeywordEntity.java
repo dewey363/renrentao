@@ -20,13 +20,13 @@ import javax.persistence.*;
 @Accessors(chain = true) //链式写法
 public class SearchKeywordEntity {
     /**
-     * 管理员id
+     * id
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer searchId;
     /**
-     * 管理员账号
+     * 关键词
      */
     private String searchKeyword;
 

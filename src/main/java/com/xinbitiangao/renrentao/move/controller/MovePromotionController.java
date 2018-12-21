@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by 黄大胖子
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  * @author hay17
  */
-@Controller
+@RestController
 @RequestMapping("/move")
 public class MovePromotionController   {
 
@@ -19,7 +20,7 @@ public class MovePromotionController   {
     @GetMapping("/promotion")
     public String promotion(ModelMap modelMap) {
 
-        return "/move/promotion";
+        return "move/promotion";
     }
 
 

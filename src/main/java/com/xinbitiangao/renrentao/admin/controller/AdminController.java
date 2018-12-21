@@ -24,7 +24,7 @@ public class AdminController {
     public String index(Model model) {
         model.addAttribute("page", "index");
         log.info("【后台】访问后台首页");
-        return "/admin/index";
+        return "admin/index";
     }
 
 
@@ -37,7 +37,7 @@ public class AdminController {
     public String coupon(Model model) {
         log.info("【后台】访问后台优惠卷页面");
         model.addAttribute("page", "coupon");
-        return "/admin/coupon";
+        return "admin/coupon";
     }
 
 
@@ -50,7 +50,7 @@ public class AdminController {
     public String qq(Model model) {
         log.info("【后台】访问后台优惠卷页面");
         model.addAttribute("page", "qq");
-        return "/admin/qq";
+        return "admin/qq";
     }
 
 }

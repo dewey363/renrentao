@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 首页控制类
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  * @author hay17
  */
-@Controller
+@RestController
 @RequestMapping("/move")
 public class MoveIndexController {
 
@@ -29,7 +30,7 @@ public class MoveIndexController {
     public String index(ModelMap modelMap) {
 //        将视图map对象传递至service层
         moveIndexService.index(modelMap);
-        return "/move/index";
+        return "move/index";
     }
 
 

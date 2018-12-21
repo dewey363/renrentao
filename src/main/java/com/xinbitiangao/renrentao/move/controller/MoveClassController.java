@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by 黄大胖子
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  * @author hay17
  */
-@Controller
+@RestController
 @RequestMapping("/move")
 public class MoveClassController {
 
@@ -23,7 +24,7 @@ public class MoveClassController {
     @GetMapping("/class")
     public String classm(ModelMap modelMap) {
         mcs.classm(modelMap);
-        return "/move/class";
+        return "move/class";
     }
 
 

@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 全部商品
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  * @author hay17
  */
-@Controller
+@RestController
 @RequestMapping("/move")
 public class MoveAllgoodsController{
 
@@ -25,7 +26,7 @@ public class MoveAllgoodsController{
     @GetMapping("/allgoods")
     public String allgoods(ModelMap modelMap) {
 
-        return "/move/allgoods";
+        return "move/allgoods";
     }
 
 
