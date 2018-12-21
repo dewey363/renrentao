@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.springframework.org/schema/data/jaxb">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link type="text/css" rel="stylesheet" th:href="@{/css/move/css.css}"/>
+    <title>人人淘-</title>
+    <script language="javascript">
+        function b_load() {
+            document.getElementById("qh_con0").style.display = "block";
+            document.getElementById("qh_con1").style.display = "none";
+        }
+
+        function qiehuan(num) {
+            for (var id = 0; id <= 9; id++) {
+                if (id == num) {
+                    document.getElementById("" + id).style.display = "block";
+                } else {
+                    document.getElementById("" + id).style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="b_load();">
+<div class="nav-all">
+    <form action="" method="get">
+        <div class="sou-all"><img th:src="@{/images/move/sousuo.png}" width="25"/></div>
+        <div class="kuan-all"><input name="" type="text" value="月亮船" onclick="this.value='';focus()"/></div><!--搜索框-->
+        <div class="an-all"><input name="" type="button" value="搜索"/></div><!--搜索按钮-->
+    </form>
+</div>
+<div style="clear:both;"></div>
+
+<div class="fenlei">
+    <div class="feilei-left">
+        <ul id="nav">
+            <li th:each="ci: ${CategoryInitials}" th:onclick="'qiehuan(\''+ ${ci}+'\')'">
+                <a href="#" class="selected">
+                    <p th:text="${ci}">B</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="feilei-right">
+        <div class="tagtag">
+            <div class="tagimg"><img th:src="@{/images/move/1.png}" width="20"/></div>
+            <div class="tagp">全部商品分类</div>
+        </div>
+
+        <ul th:each="cms:${CategoryMap}" th:attr="id=${cms.key}" style="display:block" class="tag">
+            <li>
+                <a th:each="cm:${cms.value}" href="allgoods.html">
+                    <div class="feilei-box">
+                        <img th:src="@{/images/move/pic1.png}" width="100%"/>
+                        <p th:text="${cm}">普通婴儿床</p>
+                    </div>
+                </a>
+                <div style="clear:both;"></div>
+            </li>
+
+        </ul>
+
+
+        <ul id="qh_con3" style="display:none; " class="tag">
+            <li>
+                <a href="allgoods.html">
+                    <div class="feilei-box">
+                        <img src="img/pic4.png" width="100%"/>
+                        <p>普通婴儿床</p>
+                    </div>
+                </a>
+                <a href="allgoods.html">
+                    <div class="feilei-box">
+                        <img src="img/pic4.png" width="100%"/>
+                        <p>多功能</p>
+                    </div>
+                </a>
+                <a href="allgoods.html">
+                    <div class="feilei-box">
+                        <img src="img/pic4.png" width="100%"/>
+                        <p>摇床</p>
+                    </div>
+                </a>
+                <div style="clear:both;"></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div style="width:100%; height:50px;"></div>
+<table class="foot">
+    <tr>
+        <td class="foot-td"><a href="index"><img th:src="@{/images/move/f11.png}"
+                                                 width="25"/><br/>首页</a></td>
+        <td class="foot-td"><a href="class"><img th:src="@{/images/move/f22.png}" width="25"/><br/><span>搜索</span></a>
+        </td>
+        <!--     <td class="foot-td"><a href="shopping.html"><img th:src="@{/images/move/f3.png}" width="25"/><br/>购物车</a></td>
+             <td class="foot-td"><a href="my.html"><img th:src="@{/images/move/f4.png}" width="25"/><br/>个人中心</a></td>
+        -->
+    </tr>
+</table>
+
+</body>
+</html>

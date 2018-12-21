@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.springframework.org/schema/data/jaxb">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link type="text/css" rel="stylesheet" th:href="@{/css/move/css.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/move/flexslider.css}"/>
+    <title>人人淘-淘宝优惠卷分享网站</title>
+</head>
+<style>
+
+</style>
+<body style="background:#f4f4f4;">
+<div class="nav">
+    <div class="nav-left"><img th:src="@{/images/move/logo.jpg}" width="120"/></div>
+    <div class="nav-right">
+        <form action="" method="get">
+            <div class="sou"><img th:src="@{/images/move/sousuo.png}" width="25"/></div>
+            <div class="kuan"><input name="" type="text" th:value="${searchKeyword}" onclick="this.value='';focus()"/></div><!--搜索框-->
+            <div class="an"><input name="" type="button" value="搜索"/></div><!--搜索按钮-->
+        </form>
+    </div>
+</div>
+<div style="clear:both;"></div>
+<!-- 图片播放功能开始 -->
+<div class="banner">
+    <section id="section">
+
+        <div class="bannerPane">
+            <section class="slider">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li th:each="ic : ${IndexCarousels}">
+                            <a href="javascript:;">
+                                <img th:src="${ic.imgsite}"/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </section>
+</div><!-- 图片播放功能结束 -->
+<div class="nav-two"><img th:src="@{/images/move/logo1.png}" width="120"/></div>
+</div>
+
+<table class="nav-three">
+    <tr>
+        <td class="nav-three-td"><a th:href="@{allgoods}"><img th:src="@{/images/move/1.png}" width="20"/><br/>全部商品</a>
+        </td>
+        <td class="nav-three-td"><a th:href="@{class}"><img th:src="@{/images/move/2.png}"
+                                                            width="20"/><br/>商品分类</a></td>
+        <td class="nav-three-td"><a th:href="@{allgoods}"><img th:src="@{/images/move/3.png}" width="20"/><br/>商城上新</a>
+        </td>
+        <td class="nav-three-td"><a th:href="@{promotion}"><img th:src="@{/images/move/4.png}" width="20"/><br/>商城促销</a>
+        </td>
+    </tr>
+</table>
+<!--会员签到积分-->
+<!--<table class="nav-four">
+    <tr>
+        <td class="nav-four-td"><a href="#"><img th:src="@{/images/move/a1.png}" width="90%"/></a></td>
+        <td class="nav-four-td"><a href="#"><img th:src="@{/images/move/a2.png}" width="90%"/></a></td>
+        <td class="nav-four-td"><a href="#"><img th:src="@{/images/move/a3.png}" width="90%"/></a></td>
+    </tr>
+</table>-->
+
+<!--活动-->
+<!--<table class="box1">
+    <tr>
+        <td><a href="allgoods.html"><img th:src="@{/images/move/b1.png}" width="100%"/></a></td>
+        <td><a href="allgoods.html"><img th:src="@{/images/move/b2.png}" width="100%"/></a></td>
+    </tr>
+    <tr>
+        <td><a href="allgoods.html"><img th:src="@{/images/move/b3.png}" width="100%"/></a></td>
+        <td><a href="allgoods.html"><img th:src="@{/images/move/b4.png}" width="100%"/></a></td>
+    </tr>
+</table>-->
+
+<!--广告页-->
+<!--<table class="box1">
+    <tr>
+        <td><img th:src="@{/images/move/c1.png}" width="100%"/></td>
+        <td><img th:src="@{/images/move/c2.png}" width="100%"/></td>
+    </tr>
+</table>-->
+<div class="shop">
+    <div class="nav-five">
+        <div class="nav-five-left"><img th:src="@{/images/move/re.png}" width="10"/>&nbsp;&nbsp;爆款热卖</div>
+        <!--<div class="nav-five-right">更多...</div>-->
+    </div>
+    <ul>
+        <li th:each="pes : ${ProductEntitys}">
+            <a th:each="pe : ${pes}" th:href="${pe.productDiscountCouponAddress}">
+                <div class="shop-box">
+
+                    <img th:src="${pe.productImgAddress}" width="100%"/>
+
+                    <p th:text="${pe.productName}">商品标题</p>
+
+                    <p align="left" style=" font-size: 10px; ">
+                        原价：
+                        <del>￥<span th:text="${pe.productPrice}">1288</span></del>
+                    </p>
+
+                    <p align="right" style="font-size: 7px">
+                        卷后：￥<strong th:text="${pe.productCouponPrice}">12888</strong>
+                    </p>
+
+                </div>
+
+            </a>
+            <div style="clear:both;"></div>
+        </li>
+    </ul>
+</div>
+
+
+<div style="clear:both;"></div>
+<div style="width:100%; height:50px;"></div>
+<table class="foot">
+    <tr>
+        <td class="foot-td"><a href="index"><img th:src="@{/images/move/f1.png}"
+                                                 width="25"/><br/><span>首页</span></a></td>
+        <td class="foot-td"><a href="class"><img th:src="@{/images/move/f2.png}" width="25"/><br/>搜索</a></td>
+    </tr>
+</table>
+<script th:src="@{/js/move/jquery.min.js}"></script>
+<script th:src="@{/js/move/jquery.mmenu.min.all.js}"></script>
+<script th:src="@{/js/move/jquery.flexslider.js}"></script>
+<script th:src="@{/js/move/o-script.js}"></script>
+</body>
+
+</html>
