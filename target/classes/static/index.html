@@ -1,138 +1,143 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.springframework.org/schema/data/jaxb">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width"/>
-    <meta name="viewport" content="initial-scale=1.0,user-scalable=no"/>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link type="text/css" rel="stylesheet" th:href="@{/css/move/css.css}"/>
-    <link type="text/css" rel="stylesheet" th:href="@{/css/move/flexslider.css}"/>
-    <title>人人淘-淘宝优惠卷分享网站</title>
-</head>
-<style>
+<html>
 
-</style>
-<body style="background:#f4f4f4;">
-<div class="nav">
-    <div class="nav-left"><img th:src="@{/images/move/logo.jpg}" width="120"/></div>
-    <div class="nav-right">
-        <form action="" method="get">
-            <div class="sou"><img th:src="@{/images/move/sousuo.png}" width="25"/></div>
-            <div class="kuan"><input name="" type="text" th:value="${searchKeyword}" onclick="this.value='';focus()"/></div><!--搜索框-->
-            <div class="an"><input name="" type="button" value="搜索"/></div><!--搜索按钮-->
-        </form>
-    </div>
-</div>
-<div style="clear:both;"></div>
-<!-- 图片播放功能开始 -->
-<div class="banner">
-    <section id="section">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="author" content="m.178hui.com" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="format-detection" content="telephone=no">
+		<title>一起惠返利网·触摸版</title>
+		<link href="css/owl.carousel.css" rel="stylesheet">
+		<link href="css/public.css" rel="stylesheet" type="text/css" />
+		<link href="css/index.css" rel="stylesheet" type="text/css" />
 
-        <div class="bannerPane">
-            <section class="slider">
-                <div class="flexslider">
-                    <ul class="slides">
-                        <li th:each="ic : ${IndexCarousels}">
-                            <a href="javascript:;">
-                                <img th:src="${ic.imgsite}"/>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-    </section>
-</div><!-- 图片播放功能结束 -->
-<div class="nav-two"><img th:src="@{/images/move/logo1.png}" width="120"/></div>
-</div>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="plugins/layer/layer.js"></script>
 
-<table class="nav-three">
-    <tr>
-        <td class="nav-three-td"><a th:href="@{allgoods}"><img th:src="@{/images/move/1.png}" width="20"/><br/>全部商品</a>
-        </td>
-        <td class="nav-three-td"><a th:href="@{class}"><img th:src="@{/images/move/2.png}"
-                                                            width="20"/><br/>商品分类</a></td>
-        <td class="nav-three-td"><a th:href="@{allgoods}"><img th:src="@{/images/move/3.png}" width="20"/><br/>商城上新</a>
-        </td>
-        <td class="nav-three-td"><a th:href="@{promotion}"><img th:src="@{/images/move/4.png}" width="20"/><br/>商城促销</a>
-        </td>
-    </tr>
-</table>
-<!--会员签到积分-->
-<!--<table class="nav-four">
-    <tr>
-        <td class="nav-four-td"><a href="#"><img th:src="@{/images/move/a1.png}" width="90%"/></a></td>
-        <td class="nav-four-td"><a href="#"><img th:src="@{/images/move/a2.png}" width="90%"/></a></td>
-        <td class="nav-four-td"><a href="#"><img th:src="@{/images/move/a3.png}" width="90%"/></a></td>
-    </tr>
-</table>-->
+		
 
-<!--活动-->
-<!--<table class="box1">
-    <tr>
-        <td><a href="allgoods.html"><img th:src="@{/images/move/b1.png}" width="100%"/></a></td>
-        <td><a href="allgoods.html"><img th:src="@{/images/move/b2.png}" width="100%"/></a></td>
-    </tr>
-    <tr>
-        <td><a href="allgoods.html"><img th:src="@{/images/move/b3.png}" width="100%"/></a></td>
-        <td><a href="allgoods.html"><img th:src="@{/images/move/b4.png}" width="100%"/></a></td>
-    </tr>
-</table>-->
+		<script src="js/move/index.js"></script>
 
-<!--广告页-->
-<!--<table class="box1">
-    <tr>
-        <td><img th:src="@{/images/move/c1.png}" width="100%"/></td>
-        <td><img th:src="@{/images/move/c2.png}" width="100%"/></td>
-    </tr>
-</table>-->
-<div class="shop">
-    <div class="nav-five">
-        <div class="nav-five-left"><img th:src="@{/images/move/re.png}" width="10"/>&nbsp;&nbsp;爆款热卖</div>
-        <!--<div class="nav-five-right">更多...</div>-->
-    </div>
-    <ul>
-        <li th:each="pes : ${ProductEntitys}">
-            <a th:each="pe : ${pes}" th:href="${pe.productDiscountCouponAddress}">
-                <div class="shop-box">
+	
+	</head>
 
-                    <img th:src="${pe.productImgAddress}" width="100%"/>
+	<body>
+		<div class="mobile">
 
-                    <p th:text="${pe.productName}">商品标题</p>
-
-                    <p align="left" style=" font-size: 10px; ">
-                        原价：
-                        <del>￥<span th:text="${pe.productPrice}">1288</span></del>
-                    </p>
-
-                    <p align="right" style="font-size: 7px">
-                        卷后：￥<strong th:text="${pe.productCouponPrice}">12888</strong>
-                    </p>
-
-                </div>
-
-            </a>
-            <div style="clear:both;"></div>
-        </li>
-    </ul>
-</div>
+			<!--页面加载 开始-->
+			<div id="preloader"  style="display:none;">
+				<div id="status">
+					<p class="center-text"><span>拼命加载中···</span></p>
+				</div>
+			</div>
 
 
-<div style="clear:both;"></div>
-<div style="width:100%; height:50px;"></div>
-<table class="foot">
-    <tr>
-        <td class="foot-td"><a href="index"><img th:src="@{/images/move/f1.png}"
-                                                 width="25"/><br/><span>首页</span></a></td>
-        <td class="foot-td"><a href="class"><img th:src="@{/images/move/f2.png}" width="25"/><br/>搜索</a></td>
-    </tr>
-</table>
-<script th:src="@{/js/move/jquery.min.js}"></script>
-<script th:src="@{/js/move/jquery.mmenu.min.all.js}"></script>
-<script th:src="@{/js/move/jquery.flexslider.js}"></script>
-<script th:src="@{/js/move/o-script.js}"></script>
-</body>
+			<div class="header">
+				<div class="m_logo">
+					<a href="#"><img src="images/m-index_02.png"></a>
+				</div>
+				<div class="m_search">
+					<a href="#"><img src="images/m-index_05.png" width="40"></a>
+				</div>
+			</div>
+			<div class="top w">
+				<div class="m_banner" id="owl">
+					<a href="#" class="item"><img src="images/10250290397.png"></a>
+					<a href="http://www.178hui.com" class="item"><img src="images/10225357963.jpg"></a>
+				</div>
+				<div class="m_nav">
+					<a href="mall.html"><img src="images/m-index_10.png"><span>商城返利</span></a>
+					<a href="baoliao.html"><img src="images/m-index_12.png"><span>优惠爆料</span></a>
+					<a href="taobao.html"><img src="images/m-index_14.png"><span>淘宝返利</span></a>
+					<a href="article.html"><img src="images/m-index_16.png"><span>购物资讯</span></a>
+		<!--			<a href="javascript:void(0);" id="msg_bijia"><img src="images/m-index_22.png"><span>比价网</span></a>
+					<a href="qiandao.html"><img src="images/m-index_24.png"><span>有奖签到</span></a>
+					<a href="order.html"><img src="images/m-index_26.png"><span>订单管理</span></a>
+					<a href="user.html"><img src="images/m-index_27.png"><span>会员中心</span></a>-->
+				</div>
+			</div>
+			<!-- 		<div class="m_mall w">
+				<div class="mall_title"><span>热门商城</span><em><a href="#">更多</a></em></div>
+				<div class="mall_list">
+					<a href="#" class="mall">
+						<div class="mall_logo"><img src="http://www.178hui.com/upload/mall_logo/www.jd.com.png" /></div><span>最高返 <i>2.8%</i></span>
+					</a>
+					<a href="#" class="mall">
+						<div class="mall_logo"><img src="http://www.178hui.com/upload/2014/1110/14542624089.jd" /></div><span>最高返 <i>2.8%</i></span>
+					</a>
+					<a href="#" class="mall">
+						<div class="mall_logo"><img src="http://www.178hui.com/upload/mall_logo/www.amazon.cn.png" /></div><span>最高返 <i>2.8%</i></span>
+					</a>
+					<a href="#" class="mall">
+						<div class="mall_logo"><img src="http://www.178hui.com/upload/2014/0427/16595789629.gif" /></div><span>最高返 <i>2.8%</i></span>
+					</a>
+					<a href="#" class="mall">
+						<div class="mall_logo"><img src="http://www.178hui.com/upload/2015/0506/17143913934.png" /></div><span>最高返 <i>2.8%</i></span>
+					</a>
+					<a href="#" class="mall">
+						<div class="mall_logo"><img src="http://www.178hui.com/upload/mall_logo/www.gome.com.cn.png" /></div><span>最高返 <i>2.8%</i></span>
+					</a>
+					<a href="#" class="mall">
+						<div class="mall_logo"><img src="http://www.178hui.com/upload/2015/0211/16471979498.png" /></div><span>最高返 <i>2.8%</i></span>
+					</a>
+					<a href="#" class="mall">
+						<div class="mall_logo"><img src="http://www.178hui.com/upload/2014/0427/17020977409.gif" /></div><span>最高返 <i>2.8%</i></span>
+					</a>
+				</div>
+			</div>
+	 -->
+
+			<div class="m_baoliao w">
+				<!--		<div class="baoliao_title"><span>最新爆料</span><em><a href="#"><img src="images/iconfont-shuaxin.png"></a></em></div>
+			-->
+				<ul class="ui-tab-nav">
+					<li class="current">
+						<a href="#">综合</a>
+					</li>
+					<li>
+						<a href="#">优质爆料</a>
+					</li>
+					<li>
+						<a href="#">热门排行</a>
+					</li>
+					<li>
+						<a href="#">白菜汇</a>
+					</li>
+				</ul>
+
+				<!--商品列表-->
+				<div class="baoliao_list"></div>
+
+				<div class="bl_more">
+					<a href ="javascript:volid(0);" onclick="loadMore(true)">加载更多</a>
+				</div>
+			</div>
+			
+			<!--<div class="m_user w">
+				<a href="user.html">忆乡人***</a>
+				<a href="#">退出</a>
+				<a href="login.html">登录</a>
+				<a href="register.html">注册</a>
+				<a href="javascript:void(0);" class="backtop">返回顶部</a>
+			</div>-->
+			
+			<!--<div class="footer w">
+				<a href="#">
+					<div class="ico_img"><img src="images/178hui-app.png"></div><span style="color:#00bb9c">客户端</span>
+				</a>
+				<a href="index.html">
+					<div class="ico_img"><img src="images/178hui-shouji.png"></div><span style="color:#eb4f38">触摸版</span>
+				</a>
+				<a href="#">
+					<div class="ico_img"><img src="images/178hui-diannao.png"></div><span>电脑版</span>
+				</a>
+			</div>-->
+			
+			
+			<div class="copyright">Copyright © 2018-2019 藤原豆腐店 www.xinbitiangao.com 版权所有</div>
+		</div>
+		<div class="gotop backtop" style="display:none;"></div>
+
+	</body>
 
 </html>
