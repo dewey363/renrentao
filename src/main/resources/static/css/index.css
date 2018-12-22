@@ -3,10 +3,12 @@
 	float: left;
 	margin-left: 10px;
 }
+
 .header .m_logo a {
 	height: 45px;
 	float: left;
 }
+
 .header .m_logo img {
 	height: 35px;
 	margin-top: 5px;
@@ -22,13 +24,14 @@
 
 .top .m_banner {
 	padding: 5px;
-
 }
+
 .top .m_nav {
 	margin-top: 10px;
 	float: left;
 	width: 100%;
 }
+
 .top .m_nav img {
 	height: 44px;
 }
@@ -41,6 +44,7 @@
 	float: left;
 	margin-top: 10px;
 }
+
 .top .m_nav a span {
 	width: 100%;
 	float: left;
@@ -58,12 +62,14 @@
 	width: 100%;
 	height: 40px;
 }
+
 .m_mall .mall_title span {
 	float: left;
 	margin-left: 10px;
 	color: #00bb9c;
 	font-size: 16px;
 }
+
 .m_mall .mall_title em {
 	float: right;
 	margin-right: 10px;
@@ -71,6 +77,7 @@
 	font-style: normal;
 	color: #666666;
 }
+
 .m_mall .mall_title a {
 	color: #666666;
 	text-decoration: none;
@@ -81,6 +88,7 @@
 	width: 100%;
 	padding-top: 25px;
 }
+
 .m_mall .mall_list .mall {
 	float: left;
 	width: 25%;
@@ -89,6 +97,7 @@
 	margin-bottom: 25px;
 	display: block;
 }
+
 .m_mall .mall_list .mall .mall_logo {
 	height: 50px;
 	overflow: hidden;
@@ -104,11 +113,13 @@
 	font-size: 12px;
 	line-height: 30px;
 }
+
 .m_mall .mall_list .mall span i {
 	color: #FF3300;
 	font-size: 13px;
 	font-style: normal;
 }
+
 .list_mall {
 	width: 33%;
 	float: left;
@@ -117,32 +128,39 @@
 	display: block;
 	margin-bottom: 20px;
 }
+
 .list_mall .mall_logo {
 	overflow: hidden;
 	height: 40px;
 }
+
 .list_mall .mall_logo img {
-	max-height:40px;
+	max-height: 40px;
 }
+
 .list_mall span {
 	text-decoration: none;
 	color: #666666;
 	font-size: 14px;
 	line-height: 30px;
 }
+
 .list_mall span i {
 	color: #FF3300;
 	font-size: 14px;
 	font-style: normal;
 }
 
+
 /*淘宝返利*/
+
 .tao_search {
 	background-image: url(../images/bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center top;
 }
+
 .taobao_form {
 	margin-top: 18%;
 	width: 100%;
@@ -167,7 +185,7 @@
 	border-bottom-style: none;
 	border-left-style: none;
 	outline: none;
-	font-family:Helvetica, "Microsoft YaHei", Arial, Helvetica, sans-serif;
+	font-family: Helvetica, "Microsoft YaHei", Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: #666666;
 	background-image: url(../images/iconfont-sousuo.png);
@@ -179,6 +197,7 @@
 	margin-bottom: 0px;
 	margin-left: 0px;
 }
+
 .taobao_submit {
 	float: left;
 	width: 20%;
@@ -192,7 +211,7 @@
 	border-bottom-style: none;
 	border-left-style: none;
 	outline: none;
-	font-family:Helvetica, "Microsoft YaHei", Arial, Helvetica, sans-serif;
+	font-family: Helvetica, "Microsoft YaHei", Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 46px;
 	color: #FFFFFF;
@@ -203,14 +222,14 @@
 	cursor: pointer;
 	background-position: center;
 }
+
 .taobao_liucheng {
 	width: 100%;
 	background-color: #fffaea;
 	text-align: center;
 }
 
-
-.m_baoliao  .baoliao_title {
+.m_baoliao .baoliao_title {
 	line-height: 40px;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
@@ -218,12 +237,14 @@
 	width: 100%;
 	height: 40px;
 }
+
 .m_baoliao .baoliao_title span {
 	float: left;
 	margin-left: 10px;
 	color: #00bb9c;
 	font-size: 16px;
 }
+
 .m_baoliao .baoliao_title em {
 	float: right;
 	margin-right: 10px;
@@ -231,20 +252,22 @@
 	font-style: normal;
 	color: #666666;
 }
+
 .m_baoliao .baoliao_title a {
 	color: #666666;
 	text-decoration: none;
 }
+
 .m_baoliao .baoliao_title img {
 	width: 20px;
 	margin-top: 10px;
 }
 
-
 .m_baoliao .baoliao_list {
 	float: left;
 }
-.baoliao_content   {
+
+.baoliao_content {
 	float: left;
 	width: 100%;
 	border-bottom-width: 1px;
@@ -252,15 +275,18 @@
 	border-bottom-color: #F2F2F2;
 	margin-top: 15px;
 }
+
 .baoliao_content .bl_img {
 	float: left;
 	margin: 5px;
 	padding-left: 5px;
 	width: 25%;
 }
+
 .baoliao_content .bl_img img {
 	width: 150px;
 }
+
 .baoliao_content .bl_right {
 	float: left;
 	margin-left: 10px;
@@ -273,8 +299,9 @@
 	color: #666666;
 	line-height: normal;
 	width: 100%;
-	font-weight:bold
+	font-weight: bold
 }
+
 .baoliao_content .bl_note {
 	float: left;
 	font-size: 12px;
@@ -283,6 +310,7 @@
 	margin-top: 5px;
 	width: 100%;
 }
+
 .baoliao_content .bl_tag {
 	float: left;
 	font-size: 12px;
@@ -290,11 +318,13 @@
 	line-height: 30px;
 	margin-top: 10px;
 }
+
 .baoliao_content .bl_right .bl_tag .bl_price {
 	float: left;
 	font-size: 12px;
 	color: #FF3300;
 }
+
 .baoliao_content .bl_right .bl_tag .bl_oprice {
 	font-size: 12px;
 	text-decoration: line-through;
@@ -302,17 +332,20 @@
 	margin-left: 10px;
 	color: #999999;
 }
+
 .baoliao_content .bl_right .bl_tag .bl_mall {
 	float: right;
 	font-size: 12px;
 	color: #666666;
 }
+
 .baoliao_content .bl_right .bl_tag .bl_time {
 	float: right;
 	font-size: 12px;
 	color: #666666;
 	margin-left: 10px;
 }
+
 .m_baoliao .bl_more {
 	line-height: 40px;
 	text-align: center;
@@ -332,43 +365,45 @@
 	float: left;
 	font-size: 12px;
 }
-.ui-tab-nav {
-	width:100%;
-	background-color:#fff;
-	display:box;
-	display:-webkit-box;
-	font-size:16px;
-	height:45px;
-	-webkit-box-sizing:border-box;
-	box-sizing:border-box
-}
-.ui-tab-nav li {
-	height:45px;
-	line-height:45px;
-	min-width:70px;
-	box-flex:1;
-	-webkit-box-flex:1;
-	text-align:center;
-	color:gray;
-	-webkit-box-sizing:border-box;
-	box-sizing:border-box;
-	font-size: 14px;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #F6F6F6;
-}
-.ui-tab-nav li a {
-	text-decoration: none;
-	color: gray;
-	display: block;
-	float: left;
+
+
+/*导航栏-start*/
+.wrapper {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	position: relative;
+	height: 1rem;
 	width: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+	border-bottom: 1px solid #ccc
 }
-.ui-tab-nav  li.current a {
-	color:#00bb9c;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #00bb9c;
-	line-height: 45px;
-	height: 44px;
+
+.wrapper .scroller {
+	position: absolute
 }
+
+.wrapper .scroller li {
+	height: 1rem;
+	color: #333;
+	float: left;
+	line-height: 1rem;
+	font-size: .4rem;
+	text-align: center
+}
+
+.wrapper .scroller li a {
+	text-decoration:none;
+	color: #333;
+	display: block;
+	margin: 0 .3rem;
+	padding: 0 .1rem
+}
+
+.wrapper .scroller li.cur a {
+	
+	color: #1cbb9b;
+	height: .9rem;
+	border-bottom: .1rem solid #1cbb9b
+}
+/*导航栏-end*/

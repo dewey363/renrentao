@@ -34,7 +34,7 @@ public class MoveProductController {
      * @return
      */
     @GetMapping("/list")
-    public R list(Integer type, Integer page, Integer size) {
+    public R list(String type, Integer page, Integer size) {
         try {
             R  r = new R();
             r.put("data", mps.list(type, page, size));

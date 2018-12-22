@@ -19,5 +19,5 @@ public interface MoveProductService {
      * @param size
      * @return
      */
-    List<ProductEntity> list(Integer type, Integer page, Integer size);
+    List<ProductEntity> list(String type, Integer page, Integer size);
 }
