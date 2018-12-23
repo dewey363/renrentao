@@ -1,7 +1,6 @@
-package com.xinbitiangao.renrentao.move.repository;
+package com.xinbitiangao.renrentao.common.repository;
 
-import com.xinbitiangao.renrentao.common.entity.ProductEntity;
-import com.xinbitiangao.renrentao.move.entity.IndexCarouselEntity;
+import com.xinbitiangao.renrentao.common.entity.IndexCarouselEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

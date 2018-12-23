@@ -1,4 +1,4 @@
-package com.xinbitiangao.renrentao.move.entity;
+package com.xinbitiangao.renrentao.common.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,13 +9,6 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
-@Entity
-@Data
-@Table(name = "index_carousel")
-@NoArgsConstructor //无参构造
-@AllArgsConstructor //全参构造
-@Accessors(chain = true) //链式写法
-
 /**
  * 首页轮播图实体类
  * Created by 黄大胖子
@@ -23,6 +16,12 @@ import java.util.Date;
  *
  * @author hay17
  */
+@Entity
+@Data
+@Table(name = "index_carousel")
+@NoArgsConstructor //无参构造
+@AllArgsConstructor //全参构造
+@Accessors(chain = true) //链式写法
 public class IndexCarouselEntity {
     /**
      * 主键

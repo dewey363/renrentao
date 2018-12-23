@@ -1,22 +1,14 @@
 package com.xinbitiangao.renrentao.move.service.impl;
 
 import com.xinbitiangao.renrentao.common.entity.ProductEntity;
-import com.xinbitiangao.renrentao.common.entity.SearchKeywordEntity;
 import com.xinbitiangao.renrentao.common.repository.ProductRepository;
-import com.xinbitiangao.renrentao.common.repository.SearchKeywordRepository;
-import com.xinbitiangao.renrentao.move.entity.IndexCarouselEntity;
-import com.xinbitiangao.renrentao.move.repository.IndexCarouselRepository;
 import com.xinbitiangao.renrentao.move.service.MoveProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import org.springframework.ui.ModelMap;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * @author 1.0

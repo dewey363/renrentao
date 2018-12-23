@@ -34,4 +34,7 @@ public class ProductCategoryEntity {
      * 首字母
      */
     private String categoryInitial;
+
+
+
 }
