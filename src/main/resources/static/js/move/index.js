@@ -134,8 +134,8 @@ function data() {
                     "<div class=\"bl_title\">" + val.productName + "</div>" +
                     "<div class=\"bl_note\">" + val.discountCouponSum + "</div>" +
                     "<div class=\"bl_tag\">" +
-                    "<div class=\"bl_price\">￥" + val.productCouponPrice + "</div>" +
-                    "<div class=\"bl_oprice\">￥" + val.productPrice + "</div>" +
+                    "<div class=\"bl_price\" style='font-size: 20px;'>￥" + val.productCouponPrice + "</div>" +
+                    "<div class=\"bl_oprice\" style='font-size: 10px;'>￥" + val.productPrice + "</div>" +
                     "<div class=\"bl_time\">" + val.discountCouponStartTime.split(" ")[0] + "</div>" +
                     "<div class=\"bl_mall\">" + val.platform + "</div></div></div></div></a>";
                 $(".baoliao_list").append(itemHtml);

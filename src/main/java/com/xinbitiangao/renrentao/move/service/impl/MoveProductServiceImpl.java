@@ -6,6 +6,7 @@ import com.xinbitiangao.renrentao.move.service.MoveProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -66,8 +67,10 @@ public class MoveProductServiceImpl implements MoveProductService {
             case "户外运动":
                 type = "%户外%";
                 break;
+            default:
         }
-        Pageable pageable = new PageRequest(page, size);
+        Sort sort = new Sort(Sort.Direction.DESC, "productRate");
+        Pageable pageable = new PageRequest(page, size,sort);
         List<ProductEntity> pes = productRepository.findByProductCategoryLike(type, pageable);
 
         return pes;

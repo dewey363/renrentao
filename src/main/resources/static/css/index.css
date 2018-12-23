@@ -274,6 +274,7 @@
     border-bottom-style: solid;
     border-bottom-color: #F2F2F2;
     margin-top: 15px;
+
 }
 
 .baoliao_content .bl_img {
@@ -306,9 +307,11 @@
     float: left;
     font-size: 12px;
     line-height: normal;
-    color: #FF3300;
+    color: #46cdb7;
     margin-top: 5px;
     width: 100%;
+    font-size: 10px;
+    text-align: right;
 }
 
 .baoliao_content .bl_tag {
