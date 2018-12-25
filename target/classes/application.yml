@@ -1,9 +1,13 @@
 server:
   session-timeout: 1800
 security:
-  basic:
-    enabled: false
+basic:
+               enabled: false
 spring:
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes:  47.105.64.46:9300
   thymeleaf:
     mode: LEGACYHTML5
     cache: false
@@ -19,5 +23,3 @@ spring:
     multipart:
       max-file-size: 50Mb
       max-request-size: 50Mb
-index:
-  productCout: 100

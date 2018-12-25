@@ -25,6 +25,7 @@ public class ESProductEntity implements Serializable {
     /**
      * 商品名称
      */
+    @Field(analyzer = "ik_max_word",searchAnalyzer = "ik_max_word")
     private String productName;
     /**
      * 商品主图
@@ -37,6 +38,7 @@ public class ESProductEntity implements Serializable {
     /**
      * 商品一级类目
      */
+    @Field(analyzer = "ik_max_word",searchAnalyzer = "ik_max_word")
     private String productCategory;
     /**
      * 淘宝客链接
@@ -50,6 +52,7 @@ public class ESProductEntity implements Serializable {
     /**
      * 商品优惠价格
      */
+    @Field(analyzer = "ik_max_word",searchAnalyzer = "ik_max_word")
     private BigDecimal productCouponPrice;
 
     /**
@@ -67,18 +70,22 @@ public class ESProductEntity implements Serializable {
     /**
      * 卖家旺旺
      */
+    @Field(analyzer = "ik_max_word",searchAnalyzer = "ik_max_word")
     private String productSellerWangwang;
     /**
      * 卖家id
      */
+    @Field(analyzer = "ik_max_word",searchAnalyzer = "ik_max_word")
     private String productSellerId;
     /**
      * 店铺名称
      */
+    @Field(analyzer = "ik_max_word",searchAnalyzer = "ik_max_word")
     private String productSellerShopName;
     /**
      * 平台
      */
+    @Field(analyzer = "ik_max_word",searchAnalyzer = "ik_max_word")
     private String platform;
     /**
      * 优惠券id
