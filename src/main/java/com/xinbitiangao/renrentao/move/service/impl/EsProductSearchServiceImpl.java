@@ -28,13 +28,10 @@ public class EsProductSearchServiceImpl extends BaseSearchServiceImpl<ESProductE
     private ESProductRepository esProductRepository;
 
     @Override
-    public void save(ESProductEntity... productDocuments) {
+    public void save(ESProductEntity... esProductEntities) {
         elasticsearchTemplate.putMapping(ESProductEntity.class);
-        if(productDocuments.length > 0){
-            /*Arrays.asList(productDocuments).parallelStream()
-                    .map(productDocumentRepository::save)
-                    .forEach(productDocument -> log.info("【保存数据】：{}", JSON.toJSONString(productDocument)));*/
-            log.info("【保存索引】：{}", JSON.toJSONString(esProductRepository.saveAll(Arrays.asList(productDocuments))));
+        if(esProductEntities.length > 0){
+            log.info("【保存索引】：{}", esProductRepository.saveAll(Arrays.asList(esProductEntities)));
         }
     }
 

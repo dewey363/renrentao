@@ -26,18 +26,14 @@ public class MoveProductController {
     MoveProductService mps;
 
     /**
-     * 获取全部商品
-     *
-     * @param type 商品列表
-     * @param page
-     * @param size
+     * 分页查询
      * @return
      */
     @GetMapping("/list")
-    public R list(String type, Integer page, Integer size) {
+    public R findPageList(String type, Integer page, Integer size) {
         try {
             R r = new R();
-            r.put("data", mps.list(type.trim(), page, size));
+            r.put("data", mps.findPageList(type.trim(), page, size));
             return r;
         } catch (Exception e) {
             return R.error();

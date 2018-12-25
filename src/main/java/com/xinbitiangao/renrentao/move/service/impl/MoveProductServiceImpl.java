@@ -1,6 +1,7 @@
 package com.xinbitiangao.renrentao.move.service.impl;
 
 import com.xinbitiangao.renrentao.common.entity.ProductEntity;
+import com.xinbitiangao.renrentao.common.repository.ESProductRepository;
 import com.xinbitiangao.renrentao.common.repository.ProductRepository;
 import com.xinbitiangao.renrentao.move.service.MoveProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,17 +23,15 @@ public class MoveProductServiceImpl implements MoveProductService {
 
     @Autowired
     ProductRepository productRepository;
+    @Autowired
+    ESProductRepository esProductRepository;
 
     /**
-     * 获取商品 列表
-     *
-     * @param type
-     * @param page
-     * @param size
+     * 分页查询
      * @return
      */
     @Override
-    public List<ProductEntity> list(String type, Integer page, Integer size) {
+    public List<ProductEntity> findPageList(String type, Integer page, Integer size) {
         switch (type) {
             case "综 合":
                 type = "%";
@@ -72,6 +71,8 @@ public class MoveProductServiceImpl implements MoveProductService {
         Sort sort = new Sort(Sort.Direction.DESC, "productRate");
         Pageable pageable = new PageRequest(page, size,sort);
         List<ProductEntity> pes = productRepository.findByProductCategoryLike(type, pageable);
+
+
 
         return pes;
     }

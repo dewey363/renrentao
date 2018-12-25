@@ -13,11 +13,8 @@ import java.util.List;
 public interface MoveProductService {
 
     /**
-     * 获取商品 列表
-     * @param type
-     * @param page
-     * @param size
+     * 分页查询
      * @return
      */
-    List<ProductEntity> list(String type, Integer page, Integer size);
+    List<ProductEntity> findPageList(String type, Integer page, Integer size);
 }

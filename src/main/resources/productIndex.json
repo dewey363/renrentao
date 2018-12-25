@@ -1,20 +1,81 @@
 {
   "properties": {
-    "createTime": {
+    "discountCouponAddress": {
+      "type": "text"
+    },
+    "discountCouponGross": {
       "type": "long"
     },
-    "productDesc": {
+    "discountCouponId": {
+      "type": "text"
+    },
+    "discountCouponOverTime": {
+      "type": "long"
+    },
+    "discountCouponResidue": {
+      "type": "long"
+    },
+    "discountCouponStartTime": {
+      "type": "long"
+    },
+    "discountCouponSum": {
+      "type": "text"
+    },
+    "platform": {
+      "type": "text"
+    },
+    "productCategory": {
       "type": "text",
       "analyzer": "ik_max_word",
       "search_analyzer": "ik_max_word"
+    },
+    "productCouponPrice": {
+      "type": "float"
+    },
+    "productDetailsAddress": {
+      "type": "text"
+    },
+    "productDiscountCouponAddress": {
+      "type": "text"
+    },
+    "productId": {
+      "type": "text"
+    },
+    "productImgAddress": {
+      "type": "text"
     },
     "productName": {
       "type": "text",
       "analyzer": "ik_max_word",
       "search_analyzer": "ik_max_word"
     },
-    "updateTime": {
+    "productPrice": {
+      "type": "float"
+    },
+    "productRate": {
+      "type": "float"
+    },
+    "productRbrokerage": {
+      "type": "float"
+    },
+    "productSales": {
       "type": "long"
+    },
+    "productSellerId": {
+      "type": "text"
+    },
+    "productSellerShopName": {
+      "type": "text",
+      "analyzer": "ik_max_word",
+      "search_analyzer": "ik_max_word"
+    },
+    "productSellerWangwang": {
+      "type": "text",
+      "analyzer": "ik_max_word",
+      "search_analyzer": "ik_max_word"
+    },
+    "productTaokeAddress": {
+      "type": "text"
     }
   }
 }
