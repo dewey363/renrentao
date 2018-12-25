@@ -1,7 +1,9 @@
 package com.xinbitiangao.renrentao.admin.service.impl;
 
 import com.xinbitiangao.renrentao.admin.service.AdminProductService;
+import com.xinbitiangao.renrentao.common.entity.ESProductEntity;
 import com.xinbitiangao.renrentao.common.entity.ProductCategoryEntity;
+import com.xinbitiangao.renrentao.common.repository.ESProductRepository;
 import com.xinbitiangao.renrentao.common.repository.ProductCategoryRepository;
 import com.xinbitiangao.renrentao.common.utils.AlphabetUtils;
 import com.xinbitiangao.renrentao.common.utils.PageLayuiTableVO;
@@ -11,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -33,10 +36,13 @@ import java.util.List;
 @Transactional(readOnly = true, rollbackFor = Exception.class)
 @Slf4j
 public class AdminProductServiceImpl implements AdminProductService {
+
     @Autowired
     private ProductRepository productRepository;
     @Autowired
     private ProductCategoryRepository pcr;
+    @Autowired
+    private ESProductRepository espr;
 
 
     /**
@@ -130,6 +136,10 @@ public class AdminProductServiceImpl implements AdminProductService {
                     .setDiscountCouponResidue(discountCouponResidue).setDiscountCouponSum(discountCouponSum).setDiscountCouponStartTime(discountCouponStartTime)
                     .setDiscountCouponOverTime(discountCouponOverTime).setDiscountCouponAddress(discountCouponAddress).setProductDiscountCouponAddress(productDiscountCouponAddress);
             ProductEntity save = productRepository.save(productEntity);
+            ESProductEntity esProductEntity = new ESProductEntity();
+            BeanUtils.copyProperties(productEntity,esProductEntity);
+            espr.save(esProductEntity);
+
             log.info("【一键导入】{}", save);
         }
         log.info("【一键导入】结束导入");

@@ -46,8 +46,7 @@ public class MoveIndexServiceImpl implements MoveIndexService {
     /**
      * 首页初始化显示商品目录
      */
-    @Value("${index.productCout}")
-    private Integer indexproductCout;
+    private Integer indexproductCout=0;
 
     /**
      * 首页类
