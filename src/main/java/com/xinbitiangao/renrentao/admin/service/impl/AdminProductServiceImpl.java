@@ -67,7 +67,7 @@ public class AdminProductServiceImpl implements AdminProductService {
      *
      * @param file
      */
-    @Transactional(readOnly = false, rollbackFor = Exception.class)
+//    @Transactional(readOnly = false, rollbackFor = Exception.class)
     @Override
     public void productImport(MultipartFile file) throws Exception {
         log.info("【一键导入】开始导入");

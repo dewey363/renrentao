@@ -1,20 +1,29 @@
 //JavaScript代码区域
-layui.use(['element', 'upload', 'table'], function () {
+layui.use(['element', 'upload', 'table', 'layer'], function () {
     var element = layui.element,
         $ = layui.jquery,
         upload = layui.upload,
+        layer = layui.layer,
         table = layui.table;
-
+    //loading层
+    var index = null;
     //指定允许上传的文件类型
     upload.render({
         elem: '#coupon_xls'
         , url: '/admin/product/import'
         , exts: 'xls|xlsx'
         , accept: 'file' //普通文件
-        , done: function (res) {
+        , before: function () {
+            index = layer.load(1, {
+                shade: [0.5, '#fff'] //0.1透明度的白色背景
+            });
+        },
+        done: function (res) {
+            layer.close(index);
             console.log(res)
         }
-    });
+    })
+    ;
 
 
     //第一个实例

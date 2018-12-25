@@ -20,7 +20,6 @@ import java.util.Date;
 @NoArgsConstructor //无参构造
 @AllArgsConstructor //全参构造
 @Accessors(chain = true) //链式写法
-
 public class ProductEntity {
     /**
      * 商品id
@@ -118,4 +117,6 @@ public class ProductEntity {
      */
     private String productDiscountCouponAddress;
 
+    private Date createTime;
+    private Date updateTime;
 }
